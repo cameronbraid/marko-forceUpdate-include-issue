@@ -1,0 +1,34 @@
+class {
+}
+$ {
+  var hostname = out.global.req ? out.global.req.hostname : window.location.hostname
+}
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title></title>
+      <link href="//${hostname}:3000/static/bundle.css" media="all" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div.RenderTime>${Date.now()}</div>
+    <button.forceUpdate on-click('forceUpdate')>forceUpdate ${component.id}</button>
+
+    <fieldset>
+      <legend>inline</legend>
+      <CountingButton/>
+    </fieldset>
+
+    <fieldset>
+      <legend>included</legend>
+      <PlaceComponent>
+        <CountingButton/>
+      </PlaceComponent>
+    </fieldset>
+
+    <script src="//${hostname}:3000/static/bundle.js"></script>
+    
+    <browser-refresh enabled=true/>
+  </body>
+</html>

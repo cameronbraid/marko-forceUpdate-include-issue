@@ -1,0 +1,22 @@
+class {
+  onCreate() {
+    this.state = {
+      count: 0
+    }
+  }
+
+  increment() {
+    this.state.count++;
+  }
+}
+style {
+
+}
+<fieldset>
+  <legend>CountingButton</legend>
+  <div.RenderTime>${Date.now()}</div>
+  <button.forceUpdate on-click('forceUpdate')>forceUpdate  ${component.id}</button>
+  <button type="button" on-click('increment')>
+    Click me - Count: ${state.count}
+  </button>
+</fieldset>
