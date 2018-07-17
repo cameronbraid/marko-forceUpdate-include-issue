@@ -1,3 +1,5 @@
+This repo is no longer relevant since the bug was fixed in marko 4.12.1 
+
 see https://github.com/marko-js/marko/issues/1022
 
 I am having an issue in 4.7.5 (and other versions, see below) with calling forceUpdate causing state within included components to be lost.  The components are being destroyed and re-created.
